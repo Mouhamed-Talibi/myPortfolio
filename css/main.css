@@ -421,7 +421,7 @@ body {
 }
 
 .hero .hero-actions .btn.btn-primary {
-    background-color: var(--teal-accent);
+    background-color: var(--aqua-glow);
     color: var(--off-white);
     border: 2px solid var(--aqua-glow);
 }
@@ -465,7 +465,7 @@ body {
     color: var(--sunset-gold);
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 10px color-mix(in srgb, var(--default-color), transparent 90%);
+    box-shadow: 0 2px 10px color-mix(in srgb, var(--sunset-gold), transparent 90%);
 }
 
 .hero .social-links a:hover {
@@ -512,7 +512,7 @@ body {
     left: 20px;
     right: -20px;
     bottom: -20px;
-    background: linear-gradient(45deg, var(--aqua-glow), color-mix(in srgb, var(--aqua-glow), transparent 30%));
+    background: linear-gradient(45deg, var(--slate-gray), color-mix(in srgb, var(--storm-gray), transparent 30%));
     border-radius: 20px;
     z-index: 1;
 }
