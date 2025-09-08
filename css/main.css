@@ -1,0 +1,272 @@
+:root {
+    /* Base Colors */
+    --charcoal: #222831;       /* Main background / primary dark base */
+    --slate-gray: #31363F;     /* Secondary background / navbar / cards */
+    --teal-accent: #76ABAE;    /* Accent elements / highlights / hover states */
+    --off-white: #EEEEEE;      /* Primary text / clean sections / contrasts */
+
+    /* Added Harmonizing Colors */
+    --aqua-glow: #00ADB5;      /* Strong accent for buttons, links, CTAs */
+    --sunset-gold: #FFD369;    /* Highlight color for warnings, icons, or emphasis */
+    --storm-gray: #393E46;     /* Subtle background for panels / shadows / depth */
+    --soft-silver: #B5BEC9;    /* Muted text / borders / secondary UI details */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--charcoal);
+    color: var(--off-white);    
+    overflow-x: hidden;
+    font-family: "Roboto Mono", monospace;
+}
+
+/* Loader wrapper */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--charcoal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Spinner style */
+.spinner {
+    width: 80px;
+    aspect-ratio: 1;
+    --_c: no-repeat radial-gradient(farthest-side,#00ADB5,#9e9d9d00);
+    background: 
+        var(--_c) top,
+        var(--_c) left,
+        var(--_c) right,
+        var(--_c) bottom;
+    background-size: 20px 20px;
+    animation: spin 1s infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(.5turn) }
+}
+
+/* Main content (hidden initially) */
+.content {
+    display: none;
+    text-align: center;
+    padding: 50px;
+}
+
+.content.show {
+    display: block;
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: var(--slate-gray);
+    padding: 0.8rem 1rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+    padding: 0.5rem 1rem;
+    background-color: rgba(49, 54, 63, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    color: var(--aqua-glow);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--teal-accent);
+    transform: translateY(-2px);
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    padding: 0.25rem 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler:hover {
+    transform: rotate(90deg);
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    width: 25px;
+    height: 2px;
+    background-color: var(--off-white);
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: var(--off-white);
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+/* Animation when toggler is clicked */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: var(--aqua-glow);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: var(--aqua-glow);
+}
+
+/* Navbar links */
+.navbar-nav {
+    gap: 0.5rem;
+}
+
+.nav-link {
+    color: var(--off-white);
+    font-weight: 500;
+    padding: 0.5rem 0.8rem !important;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--aqua-glow);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: var(--aqua-glow);
+    transform: translateY(-2px);
+}
+
+.nav-link:hover::before {
+    width: 80%;
+}
+
+.nav-link.active,
+.nav-link.active:hover {
+    color: var(--aqua-glow);
+}
+
+.nav-link.active::before {
+    width: 80%;
+    background: var(--teal-accent);
+}
+
+/* Offcanvas enhancements */
+.offcanvas {
+    background-color: var(--charcoal);
+    color: var(--off-white);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid var(--storm-gray);
+    padding: 1.2rem 1.5rem;
+}
+
+.offcanvas-title {
+    font-weight: 700;
+    color: var(--aqua-glow);
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    filter: invert(100%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    width: 0.8em;
+    height: 0.8em;
+}
+
+.btn-close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.offcanvas-body {
+    padding: 1.5rem;
+}
+
+.offcanvas-body .nav-link {
+    padding: 0.8rem 1rem !important;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid transparent;
+    border-radius: 0 4px 4px 0;
+}
+
+.connection-links a i {
+    color: var(--teal-accent);
+}
+
+.connection-links a i:hover,
+.connection-links a i:focus {
+    color: var(--sunset-gold);
+    transition: .4s all ease-in-out;
+}
