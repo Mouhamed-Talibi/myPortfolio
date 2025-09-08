@@ -22,6 +22,13 @@
         <!-- AOS CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
         <!-- custom css -->
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -51,9 +58,9 @@
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link active" href=""><i class="fas fa-home me-1"></i> Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user me-1"></i> About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-cogs me-1"></i> Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope me-1"></i> Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user me-1"></i> About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#services"><i class="fas fa-cogs me-1"></i> Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope me-1"></i> Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -68,9 +75,9 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item"><a class="nav-link active" href=""><i class="fas fa-home me-2"></i> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user me-2"></i> About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-cogs me-2"></i> Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope me-2"></i> Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user me-2"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services"><i class="fas fa-cogs me-2"></i> Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope me-2"></i> Contact</a></li>
                     </ul>
                     
                     <div class="mt-4 pt-4 border-top border-secondary">
@@ -84,6 +91,69 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Hero Section -->
+            <section id="hero" class="hero section">
+
+            <div class="container">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
+                        <div class="content-wrapper">
+                            <h1 class="hero-title">Creative <span class="typed" data-typed-items="Developer, Freelancer, Backend Developer, Laravel Developer, PHP Developer"></span></h1>
+                            <p class="lead">Backend developer specializing in PHP and Laravel. I design and implement systems that are fast, secure, and scalable, turning ideas into functional and reliable digital solutions</p>
+
+                            <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+                                <div class="stat-item">
+                                    <span class="purecounter" data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="2">10</span>
+                                    <span class="stat-label">Projects Completed</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="purecounter" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2">1.5</span>
+                                    <span class="stat-label">Years Experience</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="purecounter" data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2">10</span>
+                                    <span class="stat-label">Happy Clients</span>
+                                </div>
+                            </div>
+
+                            <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                                <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                            </div>
+
+                            <div class="social-links" data-aos="fade-up" data-aos-delay="400">
+                                <a href="mailto:talibi.mohamed.tm@gmail.com"><i class="bi bi-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/mouhamedtalibi/"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://github.com/Mouhamed-Talibi"><i class="bi bi-github"></i></a>
+                                <a href="https://www.instagram.com/mohamed.back.dev/"><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="200">
+                        <div class="image-container">
+                            <div class="floating-elements">
+                                <div class="floating-card card-1" data-aos="zoom-in" data-aos-delay="300">
+                                    <i class="bi bi-palette"></i>
+                                    <span>PHP Developer</span>
+                                </div>
+                                <div class="floating-card card-2" data-aos="zoom-in" data-aos-delay="400">
+                                    <i class="bi bi-code-slash"></i>
+                                    <span>Development</span>
+                                </div>
+                                <div class="floating-card card-3" data-aos="zoom-in" data-aos-delay="500">
+                                    <i class="bi bi-lightning"></i>
+                                    <span>Databases</span>
+                                </div>
+                            </div>
+                            <img src="assets/img/profile/profile-square-1.webp" alt="Portfolio Hero" class="img-fluid hero-main-image">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section><!-- /Hero Section -->
 
         </div>
 
@@ -99,5 +169,19 @@
         </script>
         <!-- loader js -->
         <script src="js/loader.js"></script>
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+        <script src="assets/vendor/typed.js/typed.umd.js"></script>
+        <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Main JS File -->
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
