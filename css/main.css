@@ -94,19 +94,6 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.navbar-brand {
-    color: var(--aqua-glow);
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.navbar-brand:hover {
-    color: var(--teal-accent);
-    transform: translateY(-2px);
-}
-
 .navbar-toggler {
     border: none;
     background: transparent;
@@ -234,17 +221,21 @@ body {
     color: var(--aqua-glow);
 }
 
-.btn-close {
-    background: none;
-    border: none;
-    filter: invert(100%);
+.offcanvas .btn-close {
+    width: 1.5rem;
+    height: 1.5rem;
     opacity: 0.8;
     transition: all 0.3s ease;
-    width: 0.8em;
-    height: 0.8em;
+
+    /* SVG close icon in aqua-glow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath stroke='%2300ADB5' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M2 2l12 12M14 2L2 14'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1em 1em;
+    border: none;
 }
 
-.btn-close:hover {
+.offcanvas .btn-close:hover {
     opacity: 1;
     transform: rotate(90deg);
 }
