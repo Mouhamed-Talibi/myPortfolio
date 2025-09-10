@@ -447,7 +447,7 @@ body {
     left: 20px;
     right: -20px;
     bottom: -20px;
-    background: linear-gradient(45deg, var(--slate-gray), color-mix(in srgb, var(--storm-gray), transparent 30%));
+    background: linear-gradient(45deg, var(--slate-gray), color-mix(in srgb, var(--teal-accent), transparent 30%));
     border-radius: 20px;
     z-index: 1;
 }
@@ -463,10 +463,10 @@ body {
 
 .hero .floating-card {
     position: absolute;
-    background-color: var(--off-white);
+    background-color: var(--teal-accent);
     padding: 15px 20px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px color-mix(in srgb, var(--slate-gray), transparent 90%);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--off-white), transparent 90%);
     display: flex;
     align-items: center;
     gap: 10px;
