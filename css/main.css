@@ -48,15 +48,11 @@ body {
 /* Spinner style */
 .spinner {
     width: 80px;
-    aspect-ratio: 1;
-    --_c: no-repeat radial-gradient(farthest-side,#00ADB5,#9e9d9d00);
-    background: 
-        var(--_c) top,
-        var(--_c) left,
-        var(--_c) right,
-        var(--_c) bottom;
-    background-size: 20px 20px;
-    animation: spin 1s infinite;
+    height: 80px;
+    border: 8px solid var(--storm-gray);
+    border-top: 8px solid var(--sunset-gold);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
