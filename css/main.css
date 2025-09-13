@@ -21,7 +21,7 @@
 body {
     background-color: var(--charcoal);
     color: var(--off-white);    
-    overflow-x: hidden;
+    overflow-x: hidden; 
     font-family: "Poppins", "Roboto Mono", monospace;
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 @keyframes spin {
-    to { transform: rotate(.5turn) }
+    to { transform: rotate(.10turn) }
 }
 
 /* Main content (hidden initially) */
@@ -424,7 +424,7 @@ body {
 @media (max-width: 991px) {
     .hero .hero-image {
         min-height: auto;
-        padding: 40px 30px;
+        padding: 20px 30px;
     }
 }
 
@@ -436,7 +436,7 @@ body {
 
 .hero .hero-main-image {
     border-radius: 20px;
-    box-shadow: 0 20px 60px color-mix(in srgb, var(--off-white), transparent 85%);
+    /* box-shadow: 0 20px 60px color-mix(in srgb, var(--off-white), transparent 85%); */
     position: relative;
     z-index: 2;
 }
